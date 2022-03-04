@@ -37,7 +37,12 @@ function funzioneSparizioneNumeri() {
 function funzioneGioco() {
     for (let index = 0; index < 5; index++) {
 
-        let numeroUser = parseInt(prompt('dimmi un numero'));
+        let numeroUser = parseInt(prompt('dimmi un numero di quelli che hai visto'));
+
+        while (arrayNumeriUser.includes(numeroUser)) {
+            numeroUser = parseInt(prompt('devi dirmi un numero diverso da quelli che hai già scritto'))
+        }
+
         arrayNumeriUser.push(numeroUser);
     }
     console.log(arrayNumeriUser);
